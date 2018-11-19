@@ -1,0 +1,4 @@
+/home/eleven/下载/clion-2018.2.6/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/eleven/CLionProjects/Starter Code/starter_code"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/eleven/CLionProjects/Starter Code/starter_code/cmake-build-debug
