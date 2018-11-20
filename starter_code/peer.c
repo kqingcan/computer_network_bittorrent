@@ -28,6 +28,8 @@
 #include "queue.h"
 
 queue_t *has_chunks;
+chunk_t *get_chunks;
+int get_chunk_num;
 bt_config_t config;
 int sock;
 void init_has_chunks(char* has_chunk_file);
@@ -80,6 +82,36 @@ void init_has_chunks(char* has_chunk_file){
     fclose(file_temp);
 }
 
+void init_get_chunks(char* get_chunk_file){
+    FILE* file_temp = fopen(get_chunk_file,"r");
+    char one_temp_buf[BUF_SIZE];
+    char hash_buf[SHA1_HASH_SIZE*2];
+    int chunk_num = 0;
+
+
+    while (fgets(one_temp_buf,BUF_SIZE,file_temp)){
+        chunk_num++;
+    }
+    get_chunk_num = chunk_num;
+    get_chunks = malloc(sizeof(chunk_t) * chunk_num);
+
+    fseek(file_temp,0,SEEK_SET);
+
+    int i = 0;
+    while (fgets(one_temp_buf, BUF_SIZE, file_temp)){
+
+        sscanf(one_temp_buf, "%d %s", &(get_chunks[i]->id),hash_buf);
+        hex2binary(hash_buf,SHA1_HASH_SIZE*2,get_chunks[i]->hash);
+        memset(one_temp_buf,0,BUF_SIZE);
+        memset(hash_buf,0,SHA1_HASH_SIZE*2);
+        get_chunks[i].provider = NULL;
+        get_chunks[i].cur_size = 0;
+        get_chunks[i].data = malloc(sizeof(char)*512*1024);
+        i++;
+    }
+    fclose(file_temp);
+}
+
 // 判断他所请求的chunk该peer是否拥有
 int check_if_have(uint8_t *hash_start){
     node_t* node;
@@ -122,89 +154,134 @@ void process_inbound_udp(int sock) {
   socklen_t fromlen;
   char buf[BUFLEN];
   data_packet_t* res_pkt;
-
+  
 
   fromlen = sizeof(from);
-  spiffy_recvfrom(sock, buf, BUFLEN, 0, (struct sockaddr *) &from, &fromlen);
-  data_packet_t* packet = (data_packet_t*) buf;
-  header_t* header = &packet->header;
-  int packet_type = header->packet_type;
-  switch (packet_type){
-      case 0:{// WHOHAS
-          printf("receive WHOHAS packet!\n");
-          int req_num;
-          int data_len = 4;
-          int have_num = 0;
-          char result_data[BUFLEN];
-          uint8_t *hash_start;
+  while (spiffy_recvfrom(sock, buf, BUFLEN, 0, (struct sockaddr *) &from, &fromlen) !=-1){
+      net_to_host_transfer((data_packet_t*)buf);
+      data_packet_t* packet = (data_packet_t*) buf;
+      header_t* header = &packet->header;
+      int packet_type = header->packet_type;
+      bt_peer_t* peer = bt_peer_get(&config,(struct sockaddr *)&from);
+      switch (packet_type){
+          case 0:{// WHOHAS
+              printf("receive WHOHAS packet!\n");
+              int req_num;
+              int data_len = 4;
+              int have_num = 0;
+              char result_data[BUFLEN];
+              uint8_t *hash_start;
 
 
-          req_num = packet->data[0]; //请求的块的数量 1个byte
-          hash_start = (uint8_t *)(packet->data+4); // chunk的hash值开始的位置
-          for (int i = 0; i <req_num ; ++i) {
-              // 对于每一个请求的快，判断自己有没有
-              if (check_if_have(hash_start)){
+              req_num = packet->data[0]; //请求的块的数量 1个byte
+              hash_start = (uint8_t *)(packet->data+4); // chunk的hash值开始的位置
+              for (int i = 0; i <req_num ; ++i) {
+                  // 对于每一个请求的快，判断自己有没有
+                  if (check_if_have(hash_start)){
 
-                  have_num++;
-                  memcpy(result_data+data_len, hash_start, SHA1_HASH_SIZE);
-                  data_len += SHA1_HASH_SIZE;
+                      have_num++;
+                      memcpy(result_data+data_len, hash_start, SHA1_HASH_SIZE);
+                      data_len += SHA1_HASH_SIZE;
+                  }
+                  hash_start +=SHA1_HASH_SIZE;
               }
-              hash_start +=SHA1_HASH_SIZE;
+              if (have_num==0){
+                  res_pkt = NULL;
+              } else{
+                  memset(result_data, 0, 4);
+                  result_data[0] = have_num;
+                  printf("result_data: %s\n", result_data);
+                  res_pkt = (data_packet_t *)malloc(sizeof(data_packet_t));
+                  res_pkt->header.magic_num = 15441;
+                  res_pkt->header.version = 1;
+                  res_pkt->header.header_len = HEADERLEN;
+                  res_pkt->header.packet_len = HEADERLEN + data_len;
+                  res_pkt->header.seq_num = 0;
+                  res_pkt->header.ack_num = 0;
+                  res_pkt->header.packet_type = 1;
+                  if (res_pkt->data !=NULL)
+                      memcpy(res_pkt->data, result_data, data_len);
+              }
+
+
+              if (res_pkt !=NULL){
+                  //TODO: 把host包转换成net包，然后发送给请求块的peer
+                  int packet_size = res_pkt->header.packet_len;
+                  host_to_net_transfer(res_pkt);
+                  spiffy_sendto(sock, res_pkt, packet_size, 0, (struct sockaddr *) &from, fromlen);
+                  net_to_host_transfer(res_pkt);
+              }
+              free(res_pkt);
+              break;
           }
-          if (have_num==0){
-              res_pkt = NULL;
-          } else{
-              memset(result_data, 0, 4);
-              result_data[0] = have_num;
-              printf("result_data: %s\n", result_data);
-              res_pkt = (data_packet_t *)malloc(sizeof(data_packet_t));
-              res_pkt->header.magic_num = 15441;
-              res_pkt->header.version = 1;
-              res_pkt->header.header_len = HEADERLEN;
-              res_pkt->header.packet_len = HEADERLEN + data_len;
-              res_pkt->header.seq_num = 0;
-              res_pkt->header.ack_num = 0;
-              res_pkt->header.packet_type = 1;
-              if (res_pkt->data !=NULL)
-                  memcpy(res_pkt->data, result_data, data_len);
+          case 1:{// IHAVE
+              printf("receive IHAVE packet!\n");
+              if (get_chunk_num ==0){
+                  break;
+              }
+
+
+              int have_num = packet->data[0];
+              uint8_t *hash_start;
+              hash_start = (uint8_t *)(packet->data+4);
+
+              for (int i = 0; i <have_num ; ++i) {
+                  uint8_t hash[SHA1_HASH_SIZE];
+                  memcpy(hash, hash_start, SHA1_HASH_SIZE);
+                  for (int j = 0; j <get_chunk_num ; ++j) {
+                      if (get_chunks[i].provider ==NULL &&
+                          memcmp(hash,get_chunks[i].hash, SHA1_HASH_SIZE)==0){
+                          get_chunks[i].provider = peer;
+                          res_pkt = (data_packet_t *)malloc(sizeof(data_packet_t));
+                          res_pkt->header.magic_num = 15441;
+                          res_pkt->header.version = 1;
+                          res_pkt->header.header_len = HEADERLEN;
+                          res_pkt->header.packet_type = 2;
+                          res_pkt->header.packet_len = HEADERLEN + SHA1_HASH_SIZE;
+                          res_pkt->header.seq_num = 0;
+                          res_pkt->header.ack_num = 0;
+                          memcpy(res_pkt->data,hash, SHA1_HASH_SIZE);
+
+                      } else{
+                          res_pkt = NULL;
+                      }
+                      if (res_pkt !=NULL){
+                          int packet_size = res_pkt->header.packet_len;
+                          host_to_net_transfer(res_pkt);
+                          spiffy_sendto(sock, res_pkt, packet_size, 0, (struct sockaddr *) &from, fromlen);
+                          net_to_host_transfer(res_pkt);
+                      }
+                      free(res_pkt);
+                  }
+              }
+
+              break;
           }
+          case 2:{// GET
+              printf("receive GET packet!\n");
 
 
-          if (res_pkt !=NULL){
-              //TODO: 把host包转换成net包，然后发送给请求块的peer
-              int packet_size = res_pkt->header.packet_len;
-              host_to_net_transfer(res_pkt);
-              spiffy_sendto(sock, res_pkt, packet_size, 0, (struct sockaddr *) &from, fromlen);
-              net_to_host_transfer(res_pkt);
+
+              break;
           }
-          free(res_pkt);
-          break;
-      }
-      case 1:{// IHAVE
-          printf("receive IHAVE packet!\n");
-          
-          break;
-      }
-      case 2:{// GET
+          case 3:{// DATA
 
-          break;
-      }
-      case 3:{// DATA
+              break;
+          }
+          case 4:{// ACK
 
-          break;
-      }
-      case 4:{// ACK
+              break;
+          }
+          case 5:{// DENIED
 
-          break;
-      }
-      case 5:{// DENIED
-
-          break;
-      }
-      default:{
-          break;
+              break;
+          }
+          default:{
+              break;
+          }
       }
   }
+
 
 
 
@@ -220,6 +297,7 @@ void process_get(char *chunkfile, char *outputfile) {
   printf("mypeer: PROCESS GET SKELETON CODE CALLED.  Fill me in!  (%s, %s)\n",
 	chunkfile, outputfile);
   //TODO: 读取chunkfile，得到要请求的文件的chunk的hash值，生成一个请求chunk的packet队列
+  init_get_chunks(chunkfile);
   FILE *chunk_file = fopen(chunkfile,"r");
   assert(chunk_file !=NULL);
   char one_line[BUF_SIZE];
