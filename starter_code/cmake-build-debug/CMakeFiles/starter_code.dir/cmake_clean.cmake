@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/starter_code.dir/sha.c.o"
   "CMakeFiles/starter_code.dir/spiffy.c.o"
   "CMakeFiles/starter_code.dir/test_input_buffer.c.o"
+  "CMakeFiles/starter_code.dir/queue.c.o"
   "starter_code.pdb"
   "starter_code"
 )

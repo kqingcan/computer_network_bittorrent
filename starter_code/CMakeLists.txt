@@ -31,4 +31,4 @@ add_executable(starter_code
         spiffy.c
         spiffy.h
         test_input_buffer.c
-        topo.map peer.h)
+        topo.map peer.h queue.c)

@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/eleven/CLionProjects/Starter Code/starter_code/input_buffer.c" "/home/eleven/CLionProjects/Starter Code/starter_code/cmake-build-debug/CMakeFiles/starter_code.dir/input_buffer.c.o"
   "/home/eleven/CLionProjects/Starter Code/starter_code/make_chunks.c" "/home/eleven/CLionProjects/Starter Code/starter_code/cmake-build-debug/CMakeFiles/starter_code.dir/make_chunks.c.o"
   "/home/eleven/CLionProjects/Starter Code/starter_code/peer.c" "/home/eleven/CLionProjects/Starter Code/starter_code/cmake-build-debug/CMakeFiles/starter_code.dir/peer.c.o"
+  "/home/eleven/CLionProjects/Starter Code/starter_code/queue.c" "/home/eleven/CLionProjects/Starter Code/starter_code/cmake-build-debug/CMakeFiles/starter_code.dir/queue.c.o"
   "/home/eleven/CLionProjects/Starter Code/starter_code/server.c" "/home/eleven/CLionProjects/Starter Code/starter_code/cmake-build-debug/CMakeFiles/starter_code.dir/server.c.o"
   "/home/eleven/CLionProjects/Starter Code/starter_code/sha.c" "/home/eleven/CLionProjects/Starter Code/starter_code/cmake-build-debug/CMakeFiles/starter_code.dir/sha.c.o"
   "/home/eleven/CLionProjects/Starter Code/starter_code/spiffy.c" "/home/eleven/CLionProjects/Starter Code/starter_code/cmake-build-debug/CMakeFiles/starter_code.dir/spiffy.c.o"

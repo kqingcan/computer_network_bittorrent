@@ -1,0 +1,256 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eleven/CLionProjects/Starter Code/starter_code/bt_parse.c
+assert.h
+-
+netdb.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+bt_parse.h
+/home/eleven/CLionProjects/Starter Code/starter_code/bt_parse.h
+debug.h
+/home/eleven/CLionProjects/Starter Code/starter_code/debug.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/bt_parse.h
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+
+/home/eleven/CLionProjects/Starter Code/starter_code/chunk.c
+sha.h
+/home/eleven/CLionProjects/Starter Code/starter_code/sha.h
+chunk.h
+/home/eleven/CLionProjects/Starter Code/starter_code/chunk.h
+ctype.h
+-
+assert.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/eleven/CLionProjects/Starter Code/starter_code/chunk.h
+stdio.h
+-
+inttypes.h
+-
+
+/home/eleven/CLionProjects/Starter Code/starter_code/client.c
+assert.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+string.h
+-
+netinet/in.h
+-
+stdio.h
+-
+arpa/inet.h
+-
+
+/home/eleven/CLionProjects/Starter Code/starter_code/debug-text.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/debug.c
+stdio.h
+-
+stdlib.h
+-
+ctype.h
+-
+string.h
+-
+debug.h
+/home/eleven/CLionProjects/Starter Code/starter_code/debug.h
+debug-text.h
+/home/eleven/CLionProjects/Starter Code/starter_code/debug-text.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/debug.h
+stdio.h
+-
+sys/types.h
+-
+
+/home/eleven/CLionProjects/Starter Code/starter_code/input_buffer.c
+stdio.h
+-
+string.h
+-
+assert.h
+-
+input_buffer.h
+/home/eleven/CLionProjects/Starter Code/starter_code/input_buffer.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/input_buffer.h
+stdlib.h
+-
+sys/types.h
+-
+sys/uio.h
+-
+unistd.h
+-
+
+/home/eleven/CLionProjects/Starter Code/starter_code/make_chunks.c
+errno.h
+-
+stdio.h
+-
+math.h
+-
+string.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+unistd.h
+-
+stdlib.h
+-
+sha.h
+/home/eleven/CLionProjects/Starter Code/starter_code/sha.h
+chunk.h
+/home/eleven/CLionProjects/Starter Code/starter_code/chunk.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/peer.c
+sys/types.h
+-
+arpa/inet.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+assert.h
+-
+debug.h
+/home/eleven/CLionProjects/Starter Code/starter_code/debug.h
+spiffy.h
+/home/eleven/CLionProjects/Starter Code/starter_code/spiffy.h
+bt_parse.h
+/home/eleven/CLionProjects/Starter Code/starter_code/bt_parse.h
+input_buffer.h
+/home/eleven/CLionProjects/Starter Code/starter_code/input_buffer.h
+peer.h
+/home/eleven/CLionProjects/Starter Code/starter_code/peer.h
+chunk.h
+/home/eleven/CLionProjects/Starter Code/starter_code/chunk.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/peer.h
+bt_parse.h
+/home/eleven/CLionProjects/Starter Code/starter_code/bt_parse.h
+sha.h
+/home/eleven/CLionProjects/Starter Code/starter_code/sha.h
+queue.h
+/home/eleven/CLionProjects/Starter Code/starter_code/queue.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/queue.h
+stdlib.h
+-
+
+/home/eleven/CLionProjects/Starter Code/starter_code/server.c
+assert.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+string.h
+-
+netinet/in.h
+-
+stdio.h
+-
+spiffy.h
+/home/eleven/CLionProjects/Starter Code/starter_code/spiffy.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/sha.c
+inttypes.h
+-
+string.h
+-
+sha.h
+/home/eleven/CLionProjects/Starter Code/starter_code/sha.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/eleven/CLionProjects/Starter Code/starter_code/sha.h
+inttypes.h
+-
+
+/home/eleven/CLionProjects/Starter Code/starter_code/spiffy.c
+sys/types.h
+-
+netinet/in.h
+-
+stdlib.h
+-
+string.h
+-
+stdio.h
+-
+errno.h
+-
+arpa/inet.h
+-
+spiffy.h
+/home/eleven/CLionProjects/Starter Code/starter_code/spiffy.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/spiffy.h
+sys/types.h
+-
+sys/socket.h
+-
+debug.h
+/home/eleven/CLionProjects/Starter Code/starter_code/debug.h
+
+/home/eleven/CLionProjects/Starter Code/starter_code/test_input_buffer.c
+stdio.h
+-
+assert.h
+-
+stdlib.h
+-
+unistd.h
+-
+input_buffer.h
+/home/eleven/CLionProjects/Starter Code/starter_code/input_buffer.h
+

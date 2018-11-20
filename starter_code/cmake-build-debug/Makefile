@@ -312,6 +312,33 @@ peer.c.s:
 	$(MAKE) -f CMakeFiles/starter_code.dir/build.make CMakeFiles/starter_code.dir/peer.c.s
 .PHONY : peer.c.s
 
+queue.o: queue.c.o
+
+.PHONY : queue.o
+
+# target to build an object file
+queue.c.o:
+	$(MAKE) -f CMakeFiles/starter_code.dir/build.make CMakeFiles/starter_code.dir/queue.c.o
+.PHONY : queue.c.o
+
+queue.i: queue.c.i
+
+.PHONY : queue.i
+
+# target to preprocess a source file
+queue.c.i:
+	$(MAKE) -f CMakeFiles/starter_code.dir/build.make CMakeFiles/starter_code.dir/queue.c.i
+.PHONY : queue.c.i
+
+queue.s: queue.c.s
+
+.PHONY : queue.s
+
+# target to generate assembly for a file
+queue.c.s:
+	$(MAKE) -f CMakeFiles/starter_code.dir/build.make CMakeFiles/starter_code.dir/queue.c.s
+.PHONY : queue.c.s
+
 server.o: server.c.o
 
 .PHONY : server.o
@@ -450,6 +477,9 @@ help:
 	@echo "... peer.o"
 	@echo "... peer.i"
 	@echo "... peer.s"
+	@echo "... queue.o"
+	@echo "... queue.i"
+	@echo "... queue.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"
