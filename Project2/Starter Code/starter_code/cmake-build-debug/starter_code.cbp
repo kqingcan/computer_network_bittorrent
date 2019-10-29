@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="starter_code"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/eleven/CLionProjects/starter_code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/eleven/CLionProjects/starter_code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/eleven/CLionProjects/starter_code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="starter_code">
+				<Option output="/home/eleven/CLionProjects/starter_code/cmake-build-debug/starter_code" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/eleven/CLionProjects/starter_code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/eleven/CLionProjects/starter_code/."/>
+					<Add directory="/home/eleven/CLionProjects/starter_code/example"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 starter_code"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="starter_code/fast">
+				<Option output="/home/eleven/CLionProjects/starter_code/cmake-build-debug/starter_code" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/eleven/CLionProjects/starter_code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/eleven/CLionProjects/starter_code/."/>
+					<Add directory="/home/eleven/CLionProjects/starter_code/example"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 starter_code/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/CLionProjects/starter_code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/Makefile">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/bt_parse.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/bt_parse.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/chunk.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/chunk.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/client.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/debug-text.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/debug.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/debug.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/debugparse.pl">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/example/A.gif">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/example/B.gif">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/hupsim.pl">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/input_buffer.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/input_buffer.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/make_chunks.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/nodes.map">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/packet.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/peer.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/peer.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/queue.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/queue.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/rdt_udp.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/rdt_udp.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/server.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/sha.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/sha.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/spiffy.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/spiffy.h">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/test_input_buffer.c">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/topo.map">
+			<Option target="starter_code"/>
+		</Unit>
+		<Unit filename="/home/eleven/CLionProjects/starter_code/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

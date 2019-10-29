@@ -1,0 +1,3 @@
+/home/eleven/桌面/Project2/Starter Code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/eleven/桌面/Project2/Starter Code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/eleven/桌面/Project2/Starter Code/cmake-build-debug/CMakeFiles/Starter_Code.dir

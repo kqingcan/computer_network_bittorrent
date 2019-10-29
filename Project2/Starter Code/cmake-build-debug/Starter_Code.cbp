@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Starter_Code"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/eleven/桌面/Project2/Starter Code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/eleven/桌面/Project2/Starter Code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/eleven/桌面/Project2/Starter Code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Starter_Code">
+				<Option output="/home/eleven/桌面/Project2/Starter Code/cmake-build-debug/Starter_Code" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/eleven/桌面/Project2/Starter Code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/eleven/桌面/Project2/Starter Code/starter_code"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 Starter_Code"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Starter_Code/fast">
+				<Option output="/home/eleven/桌面/Project2/Starter Code/cmake-build-debug/Starter_Code" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/eleven/桌面/Project2/Starter Code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/eleven/桌面/Project2/Starter Code/starter_code"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 Starter_Code/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/eleven/桌面/Project2/Starter\ Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/bt_parse.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/bt_parse.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/chunk.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/chunk.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/client.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/debug-text.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/debug.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/debug.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/input_buffer.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/input_buffer.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/make_chunks.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/packet.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/peer.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/peer.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/queue.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/queue.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/rdt_udp.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/rdt_udp.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/server.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/sha.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/sha.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/spiffy.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/spiffy.h">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/starter_code/test_input_buffer.c">
+			<Option target="Starter_Code"/>
+		</Unit>
+		<Unit filename="/home/eleven/桌面/Project2/Starter Code/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
